@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Моё приложение{% endblock %}</title>
+    {% load static menu_tags %}
+</head>
+<body>
+    <header>
+        {% comment %} {% for i in draw_menu 'Header' %}
+        <div>i</div>
+        {% endfor %} {% endcomment %}
+        {% draw_menu 'Header' as items %} 
+        {% for i in items.items %}
+        <div>{{ i }}</div>
+        {% endfor %}
+    </header>
+</body>
+</html>
